@@ -4,6 +4,7 @@ RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|
 RUN yum install httpd zip unzip -y
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page288/global.zip /var/www/html
 WORKDIR /var/wow/html
+RUN mkdir space
 RUN unzip global.zip
 RUN rm -rf global.zip &&\
     cp -rf global-master/* . &&\
